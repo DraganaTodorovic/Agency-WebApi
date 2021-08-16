@@ -1,0 +1,140 @@
+﻿@section Scripts {
+    @Scripts.Render("~/Scripts/Skripta.js")
+}
+
+<div class="row" style="margin:auto; width:900px">
+    <br />
+    <div style="text-align:center" class="form-group" id="btnsPocetak">
+        <button id="pocetakBtn" class="btn btn-default" style="background-color:yellow; color:black; align-items:center; width:150px">Pocetak</button>
+    </div>
+    <div style="text-align:center" class="form-group">
+        <h4 id="info_begin" style="text-align:center"><b>Korisnik nije prijavljen na sistem!</b></h4>
+    </div>
+    <div style="text-align:center" class="form-group" id="btns">
+        <button id="regBtn" class="btn btn-default" style="background-color:yellow; color:black; align-items:center; width:200px">Registracija i Prijava</button>
+        <br />
+    </div>
+
+    <div id="loginDiv" class="row" style="margin:auto">
+        <div style="text-align:center" class="form-group">
+            <h4 id="info_pocetak" style="text-align:center"><b>Registracija i prijava korisnika</b></h4>
+        </div>
+        <br />
+        <div class="row form-group" style="margin:auto; width:350px">
+            <label class="text-left">Korisnicko ime:</label>
+            <input style="float:right; width:200px" class="form-control col-sm-6" type="text" id="loginEmail" />
+        </div>
+        <br />
+        <div class="row form-group" style="margin:auto; width:350px">
+            <label class="text-left">Lozinka:</label>
+            <input style="float:right; width:200px" class="form-control col-sm-6" type="password" id="loginPass" />
+        </div>
+        <br />
+        <div style="text-align:center" class="form-group">
+            <button type="submit" id="registrationBtn" class="btn btn-default" style="background-color:yellow; color:black; width:120px">Registracija</button>
+            <span><button id="loginBtn" class="btn btn-default" style="margin-left:60px; width:120px">Prijava</button></span>
+        </div>
+
+        <div class="text-left col-md-8" style="color:blue; text-align:center">
+            <p id="info"></p>
+        </div>
+    </div>
+</div>
+
+<br />
+<div class="row">
+    <div style="text-align:center" class="form-group">
+        <p id="loggedInParagraph"></p>
+    </div>
+
+    <div style="text-align:center" class="form-group" id="logoutDiv">
+        <button id="logoutBtn" class="btn btn-default" style="background-color:yellow; color:black; align-items:center; width:150px">Odjava</button>
+    </div>
+</div>
+
+<br />
+<div>
+    <div id="data" class="row text-center flex-center" style="margin:auto; float:right; width:1200px">
+    </div>
+    <div class="row text-center" id="search" style="margin:auto; float:left; width:300px">
+        <br /><br /><br />
+        <h4>Pretraga po kvadraturi</h4>
+        <label class="col-form-label col-sm-3" style="width: 100px; float: left" for="minSoba">Od: </label>
+        <input class="form-control col-sm-3" type="text" id="findInput1" style="width:150px; float:right" />
+        <br />
+        <br />
+        <label class="col-form-label col-sm-3" style="width: 100px; float: left" for="maxSoba">Do: </label>
+        <input class="form-control col-sm-3" type="text" id="findInput2" style="width:150px; float:right" />
+        <br />
+        <br />
+        <button id="findBtn" type="submit" class="btn btn-default" style="margin:auto; width:150px">Pretraga</button>
+    </div>
+    <br />
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="row text-center" style="margin:auto">
+    <br />
+    <form method="post" action="post/" id="create" style="margin: auto; width:400px">
+        <h4>Izmena nekretnina</h4>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="group" style="float:left">Agent: </label>
+            <select class="form-control col-sm-4" id="createInput4select" style="width: 200px; float: right"></select>
+            <br />
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="oznaka" style="float:left">Agencijska oznaka: </label>
+            <input class="form-control col-sm-6" type="text" id="createInput1" style="width: 100px; float: right; text-align:left" />
+            <br />
+            <p id="validationMsgInput1" style="color:red"></p>
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="mesto" style="float:left">Mesto: </label>
+            <input class="form-control col-sm-4" type="text" id="createInput3" style="width: 200px; float: right; text-align:left" />
+            <br />
+            <p id="validationMsgInput3" style="color:red"></p>
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="godina" style="float:left">Godina izgradnje: </label>
+            <input class="form-control col-sm-4" type="number" step="1" id="createInput2" style="width:100px; float:right; text-align:right" />
+            <br />
+            <p id="validationMsgInput2" style="color:red"></p>
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="kvadratura" style="float:left">Kvadratura: </label>
+            <input class="form-control col-sm-4" type="number" step="0.01" id="createInput5" style="width: 100px; float: right; text-align:right" />
+            <br />
+            <p id="validationMsgInput5" style="color:red"></p>
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="cena" style="float:left">Cena: </label>
+            <input class="form-control col-sm-4" type="number" step="0.01" id="createInput6" style="width: 100px; float: right; text-align:right" />
+            <br />
+            <p id="validationMsgInput6" style="color:red"></p>
+        </div>
+        <br />
+        <div class="row form-group" style="margin:auto; width:300px">
+            <button type="submit" class="btn btn-default" style="width:120px; float:left; color:black; background-color: yellow">Izmena</button>
+            <input id="giveUpBtn" type="button" class="btn btn-default" style="width: 120px; float:right" value="Odustajanje" />
+        </div>
+    </form>
+
+</div>
+
